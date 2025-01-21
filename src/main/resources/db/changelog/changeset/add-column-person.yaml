@@ -1,0 +1,26 @@
+databaseChangeLog:
+  - changeSet:
+      id: add-column-person
+      author: Fatema Jahura
+      changes:
+        - addColumn:
+            tableName: person
+            columns:
+              - column:
+                  name: surname
+                  type: varchar(200)
+              - column:
+                  name: creationDate
+                  type: date
+              - column:
+                  name: password
+                  type: varchar(200)
+              - column:
+                  name: passport
+                  type: varchar(200)
+              - column:
+                  name: address
+                  type: varchar(200)
+              - column:
+                  name: mobile
+                  type: varchar(200)

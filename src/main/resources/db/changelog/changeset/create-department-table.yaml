@@ -1,10 +1,10 @@
 databaseChangeLog:
   - changeSet:
-      id: create-person
+      id: create-department
       author: Fatema Jahura
       changes:
         - createTable:
-            tableName: person
+            tableName: department
             columns:
               - column:
                   name: id
@@ -14,12 +14,11 @@ databaseChangeLog:
                     primaryKey: true
                     nullable: false
               - column:
-                  name: name
+                  name: title
                   type: varchar(200)
-                  constraints:
-                    nullable: false
               - column:
-                  name: age
+                  name: building_num
                   type: integer
-                  constraints:
-                    nullable: false
+              - column:
+                  name: staffs_num
+                  type: integer

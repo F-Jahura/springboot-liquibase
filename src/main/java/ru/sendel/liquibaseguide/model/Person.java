@@ -1,21 +1,48 @@
 package ru.sendel.liquibaseguide.model;
 
-import jdk.jfr.DataAmount;
+
 import lombok.Data;
 
 import javax.persistence.*;
-
+import java.time.LocalDate;
 
 @Data
 @Entity
 public class Person {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
+    private Long id;
 
     @Column(nullable = false)
-    String name;
+    private String name;
 
     @Column(nullable = false)
-    Integer age;
+    private int age;
+
+    @Column()
+    private String surname;
+
+    @Column()
+    private String patronymic;
+
+    @Column()
+    private LocalDate creationDate;
+
+    @Column()
+    private String password;
+
+    @Column()
+    private String address;
+
+    @Column()
+    private String mobile;
+
+    @OneToOne
+    private Passport passport;
+
+    @ManyToOne
+    private Department department;
+
+
+
 }

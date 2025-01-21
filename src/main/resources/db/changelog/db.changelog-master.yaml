@@ -4,6 +4,24 @@ databaseChangeLog: #параметр в котором находятся миг
   - include:
       file: db/changelog/changeset/create-article-table.yaml
   - include:
-      file: db/changelog/changeset/rename-author-name-to-fullname.yaml
+      file: db/changelog/changeset/change-column-author.yaml
   - include:
       file: db/changelog/changeset/create-person-table.yaml
+  - include:
+      file: db/changelog/changeset/add-column-person.yaml
+  - include:
+      file: db/changelog/changeset/create-passport-table.yaml
+  - include:
+      file: db/changelog/changeset/drop-column-person.yaml
+  - include:
+      file: db/changelog/changeset/add-passport-in-person.yaml
+  - include:
+      file: db/changelog/changeset/add-patronymic-person.yaml
+  - include:
+      file: db/changelog/changeset/create-department-table.yaml
+  - include:
+      file: db/changelog/changeset/add-department-in-person.yaml
+  - include:
+      file: db/changelog/changeset/drop-productionline-table.yaml
+  - include:
+      file: db/changelog/changeset/create-departmentProductionLine-table.yaml

@@ -1,0 +1,27 @@
+databaseChangeLog:
+  - changeSet:
+      - id: 3-create-join-table
+        author: Fatema Jahura
+        changes:
+          - createTable:
+              tableName: person-passport
+              remarks: A join table between person and passport
+              schemaName: checkin
+              columns:
+                - column:
+                    name: person-id
+                    type: BIGINT
+                    constraints:
+                      nullable: false
+                - column:
+                    name: passport_id
+                    type: BIGINT
+                    constraints:
+                      nullable: false
+                      foreignKeyName: passport_person_fk
+                      references: checkin.passport(id)
+          - addPrimaryKey:
+              schemaName: checkin
+              tableName: person-passport
+              constraintName: pk_person-passport
+              columnNames: person-id, passport_id

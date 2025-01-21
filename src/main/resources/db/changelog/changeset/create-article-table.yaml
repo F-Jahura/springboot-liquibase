@@ -22,7 +22,7 @@ databaseChangeLog:
                   name: text
                   type: varchar(255)
                   constraints:
-                    nullable: false
+                    nullable: true
               - column:
                   name: author_id
                   type: bigint

@@ -1,0 +1,12 @@
+databaseChangeLog:
+  - changeSet:
+      id: drop-department-production-line-if-exists
+      author: Fatema Jahura
+      comment: drop department-production-line if exists
+      preConditions:
+        - onFail: MARK_RAN
+        - tableExists:
+            tableName: department-production-line
+      changes:
+        - dropTable:
+            tableName: department-production-line

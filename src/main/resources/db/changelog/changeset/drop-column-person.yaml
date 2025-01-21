@@ -1,0 +1,11 @@
+databaseChangeLog:
+  - changeSet:
+      id: drop-column-person
+      author: Fatema Jahura
+      changes:
+        - dropColumn:
+            tableName: person
+            columns:
+              - column:
+                  name: passport
+                  type: varchar(200)

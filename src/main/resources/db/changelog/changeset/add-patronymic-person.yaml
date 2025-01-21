@@ -1,0 +1,11 @@
+databaseChangeLog:
+  - changeSet:
+      id: add-patronymic-person
+      author: Fatema Jahura
+      changes:
+        - addColumn:
+            tableName: person
+            columns:
+              - column:
+                  name: patronymic
+                  type: varchar(200)

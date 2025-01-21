@@ -13,8 +13,8 @@ public class Author {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
 
-    @Column(name = "fullname", nullable = false)
-    String name;
+    @Column(nullable = false)
+    String fullname;
 
     public Long getId() {
         return id;
@@ -24,11 +24,11 @@ public class Author {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getFullname() {
+        return fullname;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setFullname(String fullname) {
+        this.fullname = fullname;
     }
 }

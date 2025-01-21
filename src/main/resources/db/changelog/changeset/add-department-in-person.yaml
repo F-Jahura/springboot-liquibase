@@ -1,0 +1,15 @@
+databaseChangeLog:
+  - changeSet:
+      id: add-department-id-table
+      author: Fatema Jahura
+      changes:
+        - addColumn:
+            tableName: person
+            columns:
+              - column:
+                  name: department_id
+                  type: bigint
+                  constraints:
+                    foreignKeyName: department_person_fk
+                    referencedTableName: department
+                    referencedColumnNames: id

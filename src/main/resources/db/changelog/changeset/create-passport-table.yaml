@@ -1,10 +1,10 @@
 databaseChangeLog:
   - changeSet:
-      id: create-person
+      id: create-passport
       author: Fatema Jahura
       changes:
         - createTable:
-            tableName: person
+            tableName: passport
             columns:
               - column:
                   name: id
@@ -14,12 +14,15 @@ databaseChangeLog:
                     primaryKey: true
                     nullable: false
               - column:
-                  name: name
+                  name: series
                   type: varchar(200)
                   constraints:
-                    nullable: false
+                    unique: true
               - column:
-                  name: age
-                  type: integer
+                  name: number
+                  type: varchar(200)
                   constraints:
-                    nullable: false
+                    unique: true
+              - column:
+                  name: dateOfIssue
+                  type: date

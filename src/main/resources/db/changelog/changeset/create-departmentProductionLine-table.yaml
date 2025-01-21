@@ -1,25 +1,22 @@
 databaseChangeLog:
   - changeSet:
-      id: create-person
+      id: create-departmentProductionLine
       author: Fatema Jahura
       changes:
         - createTable:
-            tableName: person
+            tableName: departmentProductionLine
             columns:
               - column:
-                  name: id
+                  name: department_id
                   type: bigint
-                  autoIncrement: true
                   constraints:
-                    primaryKey: true
                     nullable: false
               - column:
                   name: name
                   type: varchar(200)
-                  constraints:
-                    nullable: false
               - column:
-                  name: age
+                  name: equipments_count
                   type: integer
-                  constraints:
-                    nullable: false
+              - column:
+                  name: square
+                  type: integer
